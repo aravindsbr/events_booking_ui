@@ -1,0 +1,49 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Aravinds",
+      "phone_no": "8293741290",
+      "email": "aravinds@gmail.com",
+      "city": "Madurai",
+      "dob": "1/1/1996",
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "name": "Sowmiya",
+      "phone_no": "9812602841",
+      "email": "sowmiya@gmail.com",
+      "city": "Ooty",
+      "dob": "2/2/1996",
+      "status": "inactive"
+    },
+    {
+      "id": 3,
+      "name": "Praveen",
+      "phone_no": "8220320254",
+      "email": "praveen@gmail.com",
+      "city": "Ooty",
+      "dob": "3/3/1996",
+      "status": "active"
+    },
+    {
+      "id": 4,
+      "name": "Rajkumar",
+      "phone_no": "9842176294",
+      "email": "rajkumar@gmail.com",
+      "city": "Coimbatore",
+      "dob": "4/4/1996",
+      "status": "active"
+    },
+    {
+      "id": 5,
+      "name": "Reshma",
+      "phone_no": "9842176294",
+      "email": "rajkumar@gmail.com",
+      "city": "Coimbatore",
+      "dob": "4/4/1996",
+      "status": "active"
+    }
+  ]
+}
