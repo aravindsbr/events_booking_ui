@@ -1,0 +1,28 @@
+<main class="wrapper">
+  <section class="events" id="events">
+    <div class="form-group">
+      <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search">
+    </div>
+    <ul *ngIf="(eventsResponse | filter: searchText).length > 0; else noResults">
+      <li *ngFor="let response of eventsResponse | filter: searchText">
+        <h5 id="event-name">{{response.event_name | titlecase}}</h5>
+        <div class="test">
+          <figure>
+            <img src="{{response.image_src}}" alt="Event image">
+          </figure>
+          <div id="event-details">
+            <p>{{response.event_date}}</p>
+            <p>Seats available: <strong>{{response.available_seats}}</strong></p>
+            <div id="Book-button">
+              <button *ngIf="response.available_seats > 0" (click)="handleBooking(response.id)" class="btn btn-light" ><strong>Book Now</strong></button>
+              <button *ngIf="response.available_seats === 0" class="btn btn-light" disabled=true>Sold Out</button>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <ng-template #noResults>
+      <p>No results found for "{{searchText}}".</p>
+    </ng-template>
+  </section>
+</main>

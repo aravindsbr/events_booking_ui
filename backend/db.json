@@ -1,49 +1,60 @@
 {
-  "users": [
+  "events": [
     {
       "id": 1,
-      "name": "Aravinds",
-      "phone_no": "8293741290",
-      "email": "aravinds@gmail.com",
-      "city": "Madurai",
-      "dob": "1/1/1996",
-      "status": "active"
+      "event_name": "dancing",
+      "event_date": "23-July-2021",
+      "available_seats": 23,
+      "image_src": "../../assets/dancing.jpg"
     },
     {
       "id": 2,
-      "name": "Sowmiya",
-      "phone_no": "9812602841",
-      "email": "sowmiya@gmail.com",
-      "city": "Ooty",
-      "dob": "2/2/1996",
-      "status": "inactive"
+      "event_name": "singing",
+      "event_date": "23-July-2021",
+      "available_seats": 3,
+      "image_src": "../../assets/singing.jpg"
     },
     {
       "id": 3,
-      "name": "Praveen",
-      "phone_no": "8220320254",
-      "email": "praveen@gmail.com",
-      "city": "Ooty",
-      "dob": "3/3/1996",
-      "status": "active"
+      "event_name": "short film",
+      "event_date": "23-July-2021",
+      "available_seats": 20,
+      "image_src": "../../assets/filmmaking.jpg"
     },
     {
       "id": 4,
-      "name": "Rajkumar",
-      "phone_no": "9842176294",
-      "email": "rajkumar@gmail.com",
-      "city": "Coimbatore",
-      "dob": "4/4/1996",
-      "status": "active"
+      "event_name": "drawing",
+      "event_date": "23-July-2021",
+      "available_seats": 13,
+      "image_src": "../../assets/drawing.jpg"
     },
     {
       "id": 5,
-      "name": "Reshma",
-      "phone_no": "9842176294",
-      "email": "rajkumar@gmail.com",
-      "city": "Coimbatore",
-      "dob": "4/4/1996",
-      "status": "active"
+      "event_name": "public speaking",
+      "event_date": "23-July-2021",
+      "available_seats": 7,
+      "image_src": "../../assets/publicspeaking.jpg"
+    },
+    {
+      "id": 6,
+      "event_name": "photography",
+      "event_date": "23-July-2021",
+      "available_seats": 0,
+      "image_src": "../../assets/photography.jpg"
+    },
+    {
+      "id": 7,
+      "event_name": "crafts",
+      "event_date": "23-July-2021",
+      "available_seats": 25,
+      "image_src": "../../assets/crafts.jpg"
+    },
+    {
+      "id": 8,
+      "event_name": "instrumental",
+      "event_date": "23-July-2021",
+      "available_seats": 16,
+      "image_src": "../../assets/instrumental.jpg"
     }
   ]
 }

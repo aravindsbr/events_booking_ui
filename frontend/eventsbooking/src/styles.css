@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+    font-family: 'Merriweather', serif !important;
+}
+
+button{
+    background-color: #ff5200 !important;
+    color: white !important;
+    border-radius: 0.4rem !important;
+    box-shadow: 3px 3px 13px -3px rgba(0,0,0,0.75);
+    font-family: 'Mulish', sans-serif !important;
+}

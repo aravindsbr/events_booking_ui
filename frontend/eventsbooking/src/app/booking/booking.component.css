@@ -1,0 +1,28 @@
+#layout{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#imageevent {
+  width: 45%;
+  height: 70%;
+  padding-right: 1rem;
+  margin-right: 7%;
+}
+
+#booking-form{
+  min-width: 30%;
+  max-width: 70%;
+}
+
+#button-layout{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#cancel{
+  background-color: white !important;
+  color: #ff5200 !important;
+}

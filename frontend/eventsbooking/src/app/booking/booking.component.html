@@ -1,0 +1,92 @@
+<div class="col-md-6 offset-md-3 mt-5" *ngIf="eventsResponse">
+    <div class="alert alert-info" style="color: black; text-align: center;">
+        <h2><strong>{{eventsResponse.event_name | uppercase}}</strong></h2>
+        <span *ngIf="!submitted">Number of available seats: <strong>{{eventsResponse.available_seats}}</strong></span><br/>
+    </div>
+    <div class="alert alert-success" *ngIf="submitted && bookingForm.valid" style="color: black; text-align: center;">
+        <span >Your tickets are booked successfully!</span>
+    </div>
+    <div class="card mb-3">
+        <div class="card-body" id="layout">
+            <img src="{{eventsResponse.image_src}}" alt="Event image" id="imageevent">
+            <form [formGroup]="bookingForm" id="booking-form" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="username">Name:</label>
+                    <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" placeholder="Your Name" autofocus=true/>
+                    <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                        <div *ngIf="f.username.errors.required">Please enter your name</div>
+                        <div *ngIf="f.username.errors.pattern">Only letters and spaces are allowed</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" placeholder="abc@xyz.com" />
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">Please enter your email</div>
+                        <div *ngIf="f.email.errors.email">Invalid email</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Phone No:</label>
+                    <input type="text" formControlName="phoneNumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.phoneNumber.errors }" placeholder="+91 9876543210"/>
+                    <div *ngIf="submitted && f.phoneNumber.errors" class="invalid-feedback">
+                        <div *ngIf="f.phoneNumber.errors.required">Please enter your phone number</div>
+                        <div *ngIf="f.phoneNumber.errors.pattern">Invalid phone number</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="numberOfSeats">Number of seats:</label>
+                    <select formControlName="numberOfSeats" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.numberOfSeats.errors || numberOfSeatsCustomError }" >
+                        <option *ngFor="let item of numberOfSeatsOptions" value="{{item}}">{{item}}</option>
+                    </select>
+                    <div *ngIf="submitted && f.numberOfSeats.errors" class="invalid-feedback">
+                        <div *ngIf="f.numberOfSeats.errors.required">Please enter the number of seats</div>
+                    </div>
+                    <div *ngIf="numberOfSeatsCustomError" class="invalid-feedback">Number of seats selected is more than available seats</div>
+                </div>
+                <div *ngIf="displayAttendee[0]" class="form-group">
+                    <label for="attendee2">Name of Attendee #2</label>
+                    <input type="text" formControlName="attendee2" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.attendee2.errors}" />
+                    <div *ngIf="submitted && f.attendee2.errors" class="invalid-feedback">
+                        <div *ngIf="f.attendee2.errors.required">Please enter the name of Attendee #2</div>
+                    </div>
+
+                </div>
+                <div *ngIf="displayAttendee[1]" class="form-group">
+                    <label for="attendee3">Name of Attendee #3</label>
+                    <input type="text" formControlName="attendee3" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.attendee3.errors }" />
+                    <div *ngIf="submitted && f.attendee3.errors" class="invalid-feedback">
+                        <div *ngIf="f.attendee3.errors.required">Please enter the name of Attendee #3</div>
+                    </div>
+                </div>
+                <div *ngIf="displayAttendee[2]" class="form-group">
+                    <label for="attendee4">Name of Attendee #4</label>
+                    <input type="text" formControlName="attendee4" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.attendee4.errors }" />
+                    <div *ngIf="submitted && f.attendee4.errors" class="invalid-feedback">
+                        <div *ngIf="f.attendee4.errors.required">Please enter the name of Attendee #4</div>
+                    </div>
+                </div>
+                <div *ngIf="displayAttendee[3]" class="form-group">
+                    <label for="attendee5">Name of Attendee #5</label>
+                    <input type="text" formControlName="attendee5" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.attendee5.errors }" />
+                    <div *ngIf="submitted && f.attendee5.errors" class="invalid-feedback">
+                        <div *ngIf="f.attendee5.errors.required">Please enter the name of Attendee #5</div>
+                    </div>
+                </div>
+                <div *ngIf="displayAttendee[4]" class="form-group">
+                    <label for="attendee6">Name of Attendee #6</label>
+                    <input type="text" formControlName="attendee6" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.attendee6.errors }" />
+                    <div *ngIf="submitted && f.attendee6.errors" class="invalid-feedback">
+                        <div *ngIf="f.attendee6.errors.required">Please enter the name of Attendee #5</div>
+                    </div>
+                </div>
+                <div id="button-layout">
+                    <button class="btn btn-light" [disabled]="submitted">Submit</button>
+                    <button class="btn btn-danger" [disabled]="submitted" routerLink="/events" id="cancel">Cancel</button>
+                </div>
+                
+                <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+            </form>
+        </div>
+    </div>
+</div>

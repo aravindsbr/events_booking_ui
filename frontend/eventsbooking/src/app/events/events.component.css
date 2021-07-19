@@ -1,0 +1,83 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.events {
+  padding: 2rem;
+}
+
+.events > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 2.5rem;
+  padding-left: 1rem;
+}
+
+.events > ul > li {
+  border: 1px solid rgb(182, 178, 178);
+  border-radius: .5rem;
+  box-shadow: 5px 5px 13px -3px rgba(0,0,0,0.75);
+  display: inline;
+}
+
+.test{
+  display: flex;
+}
+
+.events > ul > li > .test > figure {
+  max-height: 10%;
+  max-width: 75%;
+  overflow: hidden;
+  border-top-left-radius: .3rem;
+  border-top-right-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+  position: relative;
+  padding: .5rem;
+  width: 100%;
+
+}
+
+.events > ul > li > .test > figure > img {
+  width: 100%;
+  border-top-left-radius: .3rem;
+  border-top-right-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+}
+
+.events > ul > li > figure > figcaption {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0,0,0,.7);
+  width: 100%;
+}
+
+.events > ul > li > figure > figcaption > h3 {
+  color: white;
+  padding: .75rem;
+  font-size: 1.25rem;
+}
+
+.events > ul > li > p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #666666;
+}
+
+.events > ul > li > a {
+  padding: .5rem 1rem;
+  margin: .5rem;
+}
+
+#event-name{
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  font-weight: 700;
+}
+
+#event-details{
+  padding: 0.5rem;
+  font-family: 'Mulish', sans-serif;
+}
