@@ -9,7 +9,6 @@ export class FilterPipe implements PipeTransform {
     if (!searchText) return items;
     return items.filter(item => {
       return Object.keys(item).some(key => {
-        
         return String(item['event_name']).toLowerCase().includes(searchText.toLowerCase());
       });
     });

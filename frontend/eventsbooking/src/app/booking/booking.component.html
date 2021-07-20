@@ -44,7 +44,7 @@
                     </div>
                     <div *ngIf="numberOfSeatsCustomError" class="invalid-feedback">Number of seats selected is more than available seats</div>
                 </div>
-                <div *ngIf="displayAttendee[0]" class="form-group">
+                <div *ngIf="displayAttendee[0] && !numberOfSeatsCustomError" class="form-group">
                     <label for="attendee2">Name of Attendee #2</label>
                     <input type="text" formControlName="attendee2" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.attendee2.errors}" />
                     <div *ngIf="submitted && f.attendee2.errors" class="invalid-feedback">
@@ -52,28 +52,28 @@
                     </div>
 
                 </div>
-                <div *ngIf="displayAttendee[1]" class="form-group">
+                <div *ngIf="displayAttendee[1] && !numberOfSeatsCustomError" class="form-group">
                     <label for="attendee3">Name of Attendee #3</label>
                     <input type="text" formControlName="attendee3" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.attendee3.errors }" />
                     <div *ngIf="submitted && f.attendee3.errors" class="invalid-feedback">
                         <div *ngIf="f.attendee3.errors.required">Please enter the name of Attendee #3</div>
                     </div>
                 </div>
-                <div *ngIf="displayAttendee[2]" class="form-group">
+                <div *ngIf="displayAttendee[2] && !numberOfSeatsCustomError" class="form-group">
                     <label for="attendee4">Name of Attendee #4</label>
                     <input type="text" formControlName="attendee4" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.attendee4.errors }" />
                     <div *ngIf="submitted && f.attendee4.errors" class="invalid-feedback">
                         <div *ngIf="f.attendee4.errors.required">Please enter the name of Attendee #4</div>
                     </div>
                 </div>
-                <div *ngIf="displayAttendee[3]" class="form-group">
+                <div *ngIf="displayAttendee[3] && !numberOfSeatsCustomError" class="form-group">
                     <label for="attendee5">Name of Attendee #5</label>
                     <input type="text" formControlName="attendee5" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.attendee5.errors }" />
                     <div *ngIf="submitted && f.attendee5.errors" class="invalid-feedback">
                         <div *ngIf="f.attendee5.errors.required">Please enter the name of Attendee #5</div>
                     </div>
                 </div>
-                <div *ngIf="displayAttendee[4]" class="form-group">
+                <div *ngIf="displayAttendee[4] && !numberOfSeatsCustomError" class="form-group">
                     <label for="attendee6">Name of Attendee #6</label>
                     <input type="text" formControlName="attendee6" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.attendee6.errors }" />
                     <div *ngIf="submitted && f.attendee6.errors" class="invalid-feedback">

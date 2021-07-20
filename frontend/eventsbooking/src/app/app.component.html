@@ -1,14 +1,14 @@
 <nav class="navbar navbar-expand-lg static-top"> 
   <div class="container"> 
-      <a class="navbar-brand" href="/events">{{ title }}</a> 
-      
-      <div *ngIf="isUserLoggedIn; else isLogOut" id="login-logout">
-        <button class="btn btn-light" routerLink="/logout">Logout</button>
-      </div>
+    <a class="navbar-brand" href="/events">{{ title }}</a> 
+    
+    <div *ngIf="isUserLoggedIn; else isLogOut" id="login-logout">
+      <button class="btn btn-light" routerLink="/logout">Logout</button>
+    </div>
 
-      <ng-template #isLogOut>
-        <button class="btn btn-light" routerLink="/login">Login</button>
-      </ng-template>
-    </div> 
+    <ng-template #isLogOut>
+      <button class="btn btn-light" routerLink="/login">Login</button>
+    </ng-template>
+  </div> 
 </nav> 
 <router-outlet></router-outlet>

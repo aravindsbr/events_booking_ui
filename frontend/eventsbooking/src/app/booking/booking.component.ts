@@ -76,7 +76,6 @@ export class BookingComponent implements OnInit {
   get f() { return this.bookingForm.controls; }
 
   onSubmit() {
-    console.log(this.bookingForm)
     if (this.bookingForm.invalid) {
       console.log("Invalid form")
     }

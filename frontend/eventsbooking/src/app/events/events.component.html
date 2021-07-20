@@ -1,7 +1,7 @@
 <main class="wrapper">
   <section class="events" id="events">
-    <div class="form-group">
-      <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search">
+    <div class="form-group col-md-6 offset-md-3 mb-3">
+      <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search Events">
     </div>
     <ul *ngIf="(eventsResponse | filter: searchText).length > 0; else noResults">
       <li *ngFor="let response of eventsResponse | filter: searchText">
@@ -22,7 +22,7 @@
       </li>
     </ul>
     <ng-template #noResults>
-      <p>No results found for "{{searchText}}".</p>
+      <p *ngIf="eventsResponse">No results found for "{{searchText}}".</p>
     </ng-template>
   </section>
 </main>
